@@ -1,0 +1,106 @@
+html,
+body {
+    padding: 0;
+    margin: 0;
+}
+
+#top {
+    background-color: #9e140d;
+    position: fixed;
+    width: 100%;
+    z-index: 100;
+}
+
+body {
+    display: flex;
+    /* or css grid for more intricate layouts */
+    flex-direction: column;
+}
+
+#top a {
+    color: white;
+    text-decoration: none;
+}
+
+#top b {
+    color: white;
+    text-decoration: none;
+}
+
+iframe {
+    width: 100%;
+    min-height: 50%;
+    aspect-ratio: 16/9;
+}
+
+#about {
+    width: 50%;
+    margin-left: 25%;
+    margin-right: 25%;
+}
+
+#music {
+    width: 50%;
+    margin-left: 25%;
+    margin-right: 25%;
+}
+
+#shows {
+    width: 50%;
+    margin-left: 25%;
+    margin-right: 25%;
+}
+
+#contact {
+    width: 50%;
+    margin-left: 25%;
+    margin-right: 25%;
+}
+
+@media only screen and (max-width: 900px) {
+    #about {
+        width: 80%;
+        margin-left: 10%;
+        margin-right: 10%;
+    }
+    #music {
+        width: 80%;
+        margin-left: 10%;
+        margin-right: 10%;
+    }
+    #shows {
+        width: 80%;
+        margin-left: 10%;
+        margin-right: 10%;
+    }
+    #contact {
+        width: 80%;
+        margin-left: 10%;
+        margin-right: 10%;
+    }
+}
+
+#about img {
+    width: 100%;
+}
+
+#music img {
+    max-height: 300px;
+    aspect-ratio: 1/1;
+}
+
+#shows img {
+    width: 100%;
+}
+
+.social {
+    height: 75px;
+}
+
+#contact form {
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}

@@ -1,25 +1,313 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { useState, useEffect } from 'react';
+import styled from 'styled-components';
+import { Heading } from '@chakra-ui/react';
+
+export const ChakraHeadingOne = (props) => {
+  return (
+    <Heading
+      as="h1"
+      size="2xl"
+      color="white"
+      marginBottom="10px"
+      marginTop="10px"
+    >
+      {props.children}
+    </Heading>
+  );
+};
+
+export const ChakraSubHeaderCentered = (props) => {
+  return (
+    <Heading
+      as="h2"
+      size="1xl"
+      color="white"
+      marginBottom="10px"
+      marginTop="10px"
+      textAlign="center"
+    >
+      {props.children}
+    </Heading>
+  );
+};
 
 function App() {
+  const size = useWindowSize();
+
+  useEffect(() => {
+    console.log(size);
+  });
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
+    <Wrapper>
+      {/* <Navigation>
+        <NavLink href="#about">About</NavLink>
+        <b> | </b>
+        <NavLink href="#music">Music</NavLink>
+        <b> | </b>
+        <NavLink href="#shows">Shows</NavLink>
+        <b> | </b>
+        <NavLink href="#contact">Contact</NavLink>
+      </Navigation> */}
+      <SectionComponent width={size.width}>
+        <LogoContainer>
+          <Logo
+            src={process.env.PUBLIC_URL + '/assets/logo.png'}
+            alt="Heavy Feather and the Magic Word"
+          />
+        </LogoContainer>
+        <AboutText>
+          Heavy Feather and the Magic Word (HFMW) is a band that has a wide
+          musical palette, refusing to be defined by one constant sound. Pulling
+          snippets from previous decades and genres, the band’s music is a mix
+          of early 2000s post-punk revival, 70’s hard rock, and psychedelic
+          music of the 60’s while furthering the boundaries of current musical
+          landscape.{' '}
+        </AboutText>
+        <AboutText>
+          HFMW has delivered electrifying performances at notable New York
+          venues including Mercury Lounge, the Broadway, Our Wicked Lady and
+          Trans Pecos. The songs are carried by interwoven counterpoint guitar
+          and keyboards, with gritty vocals and dynamic drums. The current
+          lineup solidified during the summer of 2021, with Chris Kendrick on
+          guitar and lead vocals, Ben Gordon on bass, Nico Astudillo on
+          keyboards and guitar, Zach Saffo on guitar and Jun Yang Ng on drums.
+        </AboutText>
+        <FullWidthImage
+          src={process.env.PUBLIC_URL + '/assets/roshan_1_crop.png'}
+        />
+      </SectionComponent>
+
+      <SectionComponent width={size.width}>
+        <ChakraHeadingOne>Music</ChakraHeadingOne>
+        <AboutText>
+          The band’s first single, “Love in Limbo”, can initially be perceived
+          as a cut and dry love song. Beyond the surface, the lyrics portray the
+          disunity people experience through tumultuous election cycles, the
+          lack of face to face interactions, and the struggle to have
+          forgiveness for others and one’s self. Being one of their most
+          delicate and light-hearted songs, it displays only the beginning of
+          the band’s vast range of song-writing to be heard on their debut
+          album.
+        </AboutText>
+        <SingleLink
+          href="https://share.amuse.io/track/heavy-feather-and-the-magic-word-love-in-limbo"
           target="_blank"
-          rel="noopener noreferrer"
         >
-          Learn React
-        </a>
-      </header>
-    </div>
+          <ChakraSubHeaderCentered>
+            "Love in Limbo" Pre-Save Link
+          </ChakraSubHeaderCentered>
+          <LogoContainer>
+            <AlbumCover src="assets/covers/love_in_limbo.jpg" />
+          </LogoContainer>
+        </SingleLink>
+        <IframeContainer>
+          <ChakraSubHeaderCentered>
+            Love in Limbo Live on the Roof
+          </ChakraSubHeaderCentered>
+          <Iframe
+            src="https://www.youtube.com/embed/B3RulTlncSY"
+            class="video"
+            title="YouTube video player"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen
+          ></Iframe>
+        </IframeContainer>
+      </SectionComponent>
+
+      <SectionComponent width={size.width}>
+        <ChakraHeadingOne>Future Shows</ChakraHeadingOne>
+        <ShowLink
+          href="https://www.eventbrite.com/e/the-down-and-outs-heavy-feather-and-the-magic-word-tight-lipsugly-mutts-tickets-288335889407?ref=eios"
+          target="_blank"
+        >
+          <ChakraSubHeaderCentered>
+            March 25th, 2022 at The Broadway
+          </ChakraSubHeaderCentered>
+          <FullWidthImage
+            src={process.env.PUBLIC_URL + '/assets/shows/march25_broadway.jpeg'}
+          />
+        </ShowLink>
+      </SectionComponent>
+
+      <SectionComponent width={size.width}>
+        <ChakraHeadingOne>Contact</ChakraHeadingOne>
+        <ChakraSubHeaderCentered>
+          Email us at{' '}
+          <Link
+            href="mailto:heavyfeatherandthemagicword@gmail.com"
+            target="_noblank"
+          >
+            heavyfeatherandthemagicword@gmail.com
+          </Link>
+          <PaddingDiv />
+        </ChakraSubHeaderCentered>
+        <SocialContainer>
+          <Link
+            href="https://www.instagram.com/heavyfeathermagicword/"
+            target="_noblank"
+          >
+            <SocialIcon
+              src={process.env.PUBLIC_URL + 'assets/social/insta.png'}
+            />
+          </Link>
+          <Link
+            href="https://www.tiktok.com/@heavyfeathermagicword"
+            target="_noblank"
+          >
+            <SocialIcon
+              src={process.env.PUBLIC_URL + 'assets/social/tiktok.png'}
+            />
+          </Link>
+          <Link
+            href="https://facebook.com/HeavyFeatherandtheMagicWord/"
+            target="_noblank"
+          >
+            <SocialIcon
+              src={process.env.PUBLIC_URL + 'assets/social/facebook.webp'}
+            />
+          </Link>
+        </SocialContainer>
+      </SectionComponent>
+    </Wrapper>
   );
 }
 
+export const Wrapper = styled.div`
+  width: 100%;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: center;
+  background-color: black;
+  margin: 0 auto;
+`;
+
+export const SectionComponent = styled.div`
+  display: flex;
+  flex-flow: column nowrap;
+  width: ${({ width }) => (width > 900 ? `50%` : `90%`)};
+  margin-left: ${({ width }) => (width > 900 ? `25%` : `5%`)};
+  margin-right: ${({ width }) => (width > 900 ? `25%` : `5%`)};
+  margin-bottom: 40px;
+`;
+
+export const FullWidthImage = styled.img`
+  width: 100%;
+`;
+
+export const AboutText = styled.p`
+  color: white;
+  margin-bottom: 20px;
+`;
+
+export const HeaderTwo = styled.h2`
+  color: white;
+  margin-bottom: 20px;
+`;
+
+export const Navigation = styled.nav`
+  color: white;
+`;
+
+export const NavLink = styled.a`
+  color: white;
+`;
+
+export const Link = styled.a`
+  color: white;
+`;
+
+export const Iframe = styled.iframe`
+  width: 100%;
+  min-height: 50%;
+  aspect-ratio: 16/9;
+`;
+
+export const SocialIcon = styled.img`
+  height: 75px;
+  margin-right: 25px;
+  margin-left: 25px;
+`;
+
+export const LogoContainer = styled.div`
+  display: flex;
+  align-items: center;
+  justify-content: center;
+`;
+
+export const Logo = styled.img`
+  height: 400px;
+`;
+
+export const AlbumCover = styled.img`
+  height: auto;
+  min-width: 300px;
+`;
+
+export const SocialContainer = styled.div`
+  display: flex;
+  flex-flow: row nowrap;
+  margin-bottom: 70px;
+  justify-content: center;
+  align-items: center;
+`;
+
+export const ShowLink = styled.a`
+  color: white;
+  margin-top: 20px;
+  border: solid #ffffff 4px;
+  border-radius: 12px;
+  padding: 16px;
+`;
+
+export const SingleLink = styled.a`
+  color: white;
+  margin-top: 20px;
+  border: solid #ffffff 4px;
+  border-radius: 12px;
+  padding: 16px;
+  height: auto;
+`;
+
+export const IframeContainer = styled.div`
+  color: white;
+  margin-top: 20px;
+  border: solid #ffffff 4px;
+  border-radius: 12px;
+  padding: 16px;
+`;
+
+export const PaddingDiv = styled.div`
+  padding-bottom: 25px;
+`;
+
 export default App;
+
+// Hook
+function useWindowSize() {
+  // Initialize state with undefined width/height so server and client renders match
+  // Learn more here: https://joshwcomeau.com/react/the-perils-of-rehydration/
+  const [windowSize, setWindowSize] = useState({
+    width: undefined,
+    height: undefined,
+  });
+  useEffect(() => {
+    // Handler to call on window resize
+    function handleResize() {
+      // Set window width/height to state
+      setWindowSize({
+        width: window.innerWidth,
+        height: window.innerHeight,
+      });
+    }
+    // Add event listener
+    window.addEventListener('resize', handleResize);
+    // Call handler right away so state gets updated with initial window size
+    handleResize();
+    // Remove event listener on cleanup
+    return () => window.removeEventListener('resize', handleResize);
+  }, []); // Empty array ensures that effect is only run on mount
+  return windowSize;
+}
