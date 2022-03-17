@@ -84,11 +84,10 @@ function App() {
           The band’s first single, “Love in Limbo”, can initially be perceived
           as a cut and dried love song. Beyond the surface, the lyrics portray
           the disunity people experience through tumultuous election cycles, the
-          lack of face to face interactions, and the struggle to have
-          forgiveness for others and one’s self. Being one of their most
-          delicate and light-hearted songs, it displays only the beginning of
-          the band’s vast range of song-writing to be heard on their debut
-          album.
+          lack of face to face interactions, and the struggle for forgiveness to
+          others and oneself. Being one of their most delicate and lighthearted
+          songs, it displays only the beginning of the band’s vast range of
+          songwriting to be heard on their debut album.
         </AboutText>
         <SingleLink
           href="https://share.amuse.io/track/heavy-feather-and-the-magic-word-love-in-limbo"
