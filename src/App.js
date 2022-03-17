@@ -57,8 +57,8 @@ function App() {
           />
         </LogoContainer>
         <AboutText>
-          Heavy Feather and the Magic Word (HFMW) is a band that has a wide
-          musical palette, refusing to be defined by one constant sound. Pulling
+          Heavy Feather and the Magic Word (HFMW) is a band with a wide musical
+          palette, refusing to be defined by one constant sound. Pulling
           snippets from previous decades and genres, the band’s music is a mix
           of early 2000s post-punk revival, 70’s hard rock, and psychedelic
           music of the 60’s while furthering the boundaries of current musical
@@ -82,8 +82,8 @@ function App() {
         <ChakraHeadingOne>Music</ChakraHeadingOne>
         <AboutText>
           The band’s first single, “Love in Limbo”, can initially be perceived
-          as a cut and dry love song. Beyond the surface, the lyrics portray the
-          disunity people experience through tumultuous election cycles, the
+          as a cut and dried love song. Beyond the surface, the lyrics portray
+          the disunity people experience through tumultuous election cycles, the
           lack of face to face interactions, and the struggle to have
           forgiveness for others and one’s self. Being one of their most
           delicate and light-hearted songs, it displays only the beginning of
