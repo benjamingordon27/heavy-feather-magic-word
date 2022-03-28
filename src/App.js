@@ -94,7 +94,7 @@ function App() {
           target="_blank"
         >
           <ChakraSubHeaderCentered>
-            "Love in Limbo" Pre-Save Link
+            Listen to "Love in Limbo" on Streaming Platforms
           </ChakraSubHeaderCentered>
           <LogoContainer>
             <AlbumCover src="assets/covers/love_in_limbo.jpg" />
@@ -102,10 +102,40 @@ function App() {
         </SingleLink>
         <IframeContainer>
           <ChakraSubHeaderCentered>
+            Love in Limbo Music Video
+          </ChakraSubHeaderCentered>
+          <Iframe
+            src="https://www.youtube.com/embed/44ks9GmbTa4"
+            class="video"
+            title="YouTube video player"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen
+          ></Iframe>
+        </IframeContainer>
+      </SectionComponent>
+
+      <SectionComponent width={size.width}>
+        <ChakraHeadingOne>Past Shows</ChakraHeadingOne>
+        <IframeContainer>
+          <ChakraSubHeaderCentered>
             Love in Limbo Live on the Roof
           </ChakraSubHeaderCentered>
           <Iframe
             src="https://www.youtube.com/embed/B3RulTlncSY"
+            class="video"
+            title="YouTube video player"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen
+          ></Iframe>
+        </IframeContainer>
+        <IframeContainer>
+          <ChakraSubHeaderCentered>
+            Heavy Feather and the Magic Word Live at Gold Sounds Bar
+          </ChakraSubHeaderCentered>
+          <Iframe
+            src="https://www.youtube.com/embed/fFvBOfJV3oo"
             class="video"
             title="YouTube video player"
             frameborder="0"
