@@ -113,16 +113,29 @@ function App() {
             allowfullscreen
           ></Iframe>
         </IframeContainer>
+        <IframeContainer>
+          <ChakraSubHeaderCentered>
+            Love in Limbo Behind the Scenes
+          </ChakraSubHeaderCentered>
+          <Iframe
+            src="https://www.youtube.com/embed/5cc7PG0IIA0"
+            class="video"
+            title="YouTube video player"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen
+          ></Iframe>
+        </IframeContainer>
       </SectionComponent>
 
       <SectionComponent width={size.width}>
         <ChakraHeadingOne>Past Shows</ChakraHeadingOne>
         <IframeContainer>
           <ChakraSubHeaderCentered>
-            Love in Limbo Live on the Roof
+            Jungle Cat Live from the Feather Den
           </ChakraSubHeaderCentered>
           <Iframe
-            src="https://www.youtube.com/embed/B3RulTlncSY"
+            src="https://www.youtube.com/embed/oNKwP3IErCg"
             class="video"
             title="YouTube video player"
             frameborder="0"
@@ -132,10 +145,10 @@ function App() {
         </IframeContainer>
         <IframeContainer>
           <ChakraSubHeaderCentered>
-            Heavy Feather and the Magic Word Live at Gold Sounds Bar
+            Fluctuate Live from Berlin Under A
           </ChakraSubHeaderCentered>
           <Iframe
-            src="https://www.youtube.com/embed/fFvBOfJV3oo"
+            src="https://www.youtube.com/embed/Vo1StQd96ZU"
             class="video"
             title="YouTube video player"
             frameborder="0"
@@ -145,7 +158,7 @@ function App() {
         </IframeContainer>
       </SectionComponent>
 
-      <SectionComponent width={size.width}>
+      {/* <SectionComponent width={size.width}>
         <ChakraHeadingOne>Future Shows</ChakraHeadingOne>
         <ShowLink
           href="https://www.eventbrite.com/e/the-down-and-outs-heavy-feather-and-the-magic-word-tight-lipsugly-mutts-tickets-288335889407?ref=eios"
@@ -158,7 +171,7 @@ function App() {
             src={process.env.PUBLIC_URL + '/assets/shows/march25_broadway.jpeg'}
           />
         </ShowLink>
-      </SectionComponent>
+      </SectionComponent> */}
 
       <SectionComponent width={size.width}>
         <ChakraHeadingOne>Contact</ChakraHeadingOne>
