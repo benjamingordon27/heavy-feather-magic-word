@@ -35,7 +35,8 @@ function App() {
   const size = useWindowSize();
 
   useEffect(() => {
-    console.log(size);
+    console.log(process.env.PUBLIC_URL + '/assets/landscape_four.png');
+    console.log(process.env.PUBLIC_URL + '/assets/roshan_1_crop.png');
   });
 
   return (
@@ -52,7 +53,7 @@ function App() {
       <SectionComponent width={size.width}>
         <LogoContainer>
           <Logo
-            src={process.env.PUBLIC_URL + '/assets/logo.png'}
+            src={process.env.PUBLIC_URL + '/assets/HFMW LOGO TAN.png'}
             alt="Heavy Feather and the Magic Word"
           />
         </LogoContainer>
@@ -66,20 +67,39 @@ function App() {
         </AboutText>
         <AboutText>
           HFMW has delivered electrifying performances at notable New York
-          venues including Mercury Lounge, the Broadway, Our Wicked Lady and
-          Trans Pecos. The songs are carried by interwoven counterpoint guitar
-          and keyboards, with gritty vocals and dynamic drums. The current
-          lineup solidified during the summer of 2021, with Chris Kendrick on
-          guitar and lead vocals, Ben Gordon on bass, Nico Astudillo on
-          keyboards and guitar, Zach Saffo on guitar and Jun Yang Ng on drums.
+          venues including Baby's All Right, Mercury Lounge, Union Pool, the
+          Broadway, Our Wicked Lady and Trans Pecos. The songs are carried by
+          interwoven counterpoint guitar and keyboards, with gritty vocals and
+          dynamic drums. The current lineup solidified during the summer of
+          2021, with Chris Kendrick on guitar and lead vocals, Ben Gordon on
+          bass, Zach Saffo on guitar and Jun Yang Ng on drums.
         </AboutText>
         <FullWidthImage
-          src={process.env.PUBLIC_URL + '/assets/roshan_1_crop.png'}
+          src={process.env.PUBLIC_URL + '/assets/landscape_four.PNG'}
         />
       </SectionComponent>
 
       <SectionComponent width={size.width}>
         <ChakraHeadingOne>Music</ChakraHeadingOne>
+        <AboutText>
+          The second single, ‘Jungle Cat’, comments on the commercialization and
+          deforestation of natural habitats spearheaded by wealthy human
+          interference and greed. The aggressive delivery of instrumentation and
+          singing evokes this predatory human behavior, while hinting that these
+          actions will bite them back in due time. This is a brief journey into
+          the psychedelic atmosphere that exists throughout the band’s catalog.
+        </AboutText>
+        <SingleLink
+          href="https://share.amuse.io/track/heavy-feather-and-the-magic-word-jungle-cat"
+          target="_blank"
+        >
+          <ChakraSubHeaderCentered>
+            Pre-save Jungle Cat on Streaming Platforms
+          </ChakraSubHeaderCentered>
+          <LogoContainer>
+            <AlbumCover src="assets/covers/JUNGLE CAT (3000x3000).png" />
+          </LogoContainer>
+        </SingleLink>
         <AboutText>
           The band’s first single, “Love in Limbo”, can initially be perceived
           as a cut and dried love song. Beyond the surface, the lyrics portray
@@ -132,10 +152,10 @@ function App() {
         <ChakraHeadingOne>Past Shows</ChakraHeadingOne>
         <IframeContainer>
           <ChakraSubHeaderCentered>
-            Jungle Cat Live from the Feather Den
+            Squeak Live from Union Pool
           </ChakraSubHeaderCentered>
           <Iframe
-            src="https://www.youtube.com/embed/oNKwP3IErCg"
+            src="https://www.youtube.com/embed/boiUA2InwTQ"
             class="video"
             title="YouTube video player"
             frameborder="0"
@@ -279,13 +299,21 @@ export const LogoContainer = styled.div`
   justify-content: center;
 `;
 
+export const JungleCatContainer = styled.div`
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  max-height: 100px;
+`;
+
 export const Logo = styled.img`
-  height: 400px;
+  padding-top: 10px;
 `;
 
 export const AlbumCover = styled.img`
   height: auto;
   min-width: 300px;
+  overflow-y: hidden;
 `;
 
 export const SocialContainer = styled.div`
@@ -306,7 +334,7 @@ export const ShowLink = styled.a`
 
 export const SingleLink = styled.a`
   color: white;
-  margin-top: 20px;
+  margin-bottom: 20px;
   border: solid #ffffff 4px;
   border-radius: 12px;
   padding: 16px;
