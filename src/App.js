@@ -94,7 +94,7 @@ function App() {
           target="_blank"
         >
           <ChakraSubHeaderCentered>
-            Pre-save Jungle Cat on Streaming Platforms
+            Listen to Jungle Cat on Streaming Platforms
           </ChakraSubHeaderCentered>
           <LogoContainer>
             <AlbumCover src="assets/covers/JUNGLE CAT (3000x3000).png" />
