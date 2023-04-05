@@ -100,6 +100,19 @@ function App() {
             <AlbumCover src="assets/covers/JUNGLE CAT (3000x3000).png" />
           </LogoContainer>
         </SingleLink>
+        <IframeContainer>
+          <ChakraSubHeaderCentered>
+            Jungle Cat Music Video
+          </ChakraSubHeaderCentered>
+          <Iframe
+            src="https://www.youtube.com/embed/b1Y9brMPvF8"
+            class="video"
+            title="YouTube video player"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen
+          ></Iframe>
+        </IframeContainer>
         <AboutText>
           The band’s first single, “Love in Limbo”, can initially be perceived
           as a cut and dried love song. Beyond the surface, the lyrics portray
