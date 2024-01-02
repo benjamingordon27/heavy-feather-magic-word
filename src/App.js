@@ -35,7 +35,7 @@ function App() {
   const size = useWindowSize();
 
   useEffect(() => {
-    console.log(process.env.PUBLIC_URL + '/assets/landscape_four.png');
+    console.log(process.env.PUBLIC_URL + '/assets/BASEMENT_SHOOT-5.jpg');
     console.log(process.env.PUBLIC_URL + '/assets/roshan_1_crop.png');
   });
 
@@ -72,10 +72,10 @@ function App() {
           interwoven counterpoint guitar and keyboards, with gritty vocals and
           dynamic drums. The current lineup solidified during the summer of
           2021, with Chris Kendrick on guitar and lead vocals, Ben Gordon on
-          bass, Zach Saffo on guitar and Jun Yang Ng on drums.
+          bass, and Cole Raymond on drums.
         </AboutText>
         <FullWidthImage
-          src={process.env.PUBLIC_URL + '/assets/landscape_four.PNG'}
+          src={process.env.PUBLIC_URL + '/assets/BASEMENT_SHOOT-5.jpg'}
         />
       </SectionComponent>
 
